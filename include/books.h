@@ -2,18 +2,21 @@
 #define BOOKS_H
 
 #include<iostream>
-#include<fstream>
+//#include<fstream>
+#include"../include/openFile.h"
 
 using namespace std;
-
 class Books{
     private:
+        int id;
         char name;
         int totalNo;
+        string fileName = "../data/Books.txt";
+        FileHandler fileHand;
     public:
-        int getNumber(char name);
-        int search(char name);
-        
+        int newEntry(int, string, int);
+        int updateEntry(int, string, int);
+        int getInfo(int, string);            
 };
 
 
