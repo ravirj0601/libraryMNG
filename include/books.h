@@ -7,13 +7,15 @@
 
 using namespace std;
 class Books{
+    
     private:
-        int id;
-        char name;
-        int totalNo;
         string fileName = "../data/Books.txt";
         FileHandler fileHand;
     public:
+        string id;
+        string name;
+        int totalNo;
+        Books(std::string n) : id(n){}
         int newEntry(int, string, int);
         int updateEntry(int, string, int);
         int getInfo(int, string);            
