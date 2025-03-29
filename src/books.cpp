@@ -5,11 +5,11 @@ int Books::newEntry(int bookID, string name, int totalNo){
     string data = std::to_string(bookID) + "\t" + name + "\t" + std::to_string(totalNo);
     string check = fileHand.read(fileName, to_string(bookID));
     char in;
-    if(!check.empty()){
+    if(check.empty()){
         fileHand.write(fileName, data);
+        cout << "Data Updated....\n";
     }else{
-        cout << "Data Already exist....\nData: " << check << endl;
-
+        // coit << "Data Already exist....\nData: " << check << endl;
         cout << "Do you want to update the record...[Y/y]\n";
         cin >> in;
         if(in == 'Y' || in == 'y'){

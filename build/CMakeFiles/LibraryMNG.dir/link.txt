@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/LibraryMNG.dir/src/main.cpp.o CMakeFiles/LibraryMNG.dir/src/users.cpp.o CMakeFiles/LibraryMNG.dir/src/books.cpp.o CMakeFiles/LibraryMNG.dir/src/openFile.cpp.o -o LibraryMNG  -lrt 

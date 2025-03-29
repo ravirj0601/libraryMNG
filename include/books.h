@@ -6,21 +6,24 @@
 #include"../include/openFile.h"
 
 using namespace std;
-class Books{
-    
+
+class Books {
     private:
-        string fileName = "../data/Books.txt";
         FileHandler fileHand;
     public:
+        string fileName = "../data/Books.txt";
         string id;
         string name;
         int totalNo;
-        Books(std::string n) : id(n){}
         int newEntry(int, string, int);
         int updateEntry(int, string, int);
         int getInfo(int, string);            
+        // Books() : id(""), name(""), totalNo(0) {}
+        Books() : id(""), name(""), totalNo(0) {
+            newEntry(0, "", 0);
+        }
+        Books(std::string n, std::string nm, int tNo) : id(n), name(nm), totalNo(tNo) {}
 };
-
 
 #endif
 

@@ -8,11 +8,13 @@ bool FileHandler::checkFile(string a){
 bool FileHandler::write(string fileName, string data){
     if(!checkFile(fileName)){
         cout << "File does not exist... \n";
-        return 0;
+        // return 0;
     }
+    cout << fileName << "...Test" << endl;
     ofstream file(fileName,ios::in | ios::ate);
     if(file.is_open()){
-        file << data + "\n";   
+        file << data + "\n";  
+        cout << "Testing.. " << endl;
         file.close();
     }
     else{
